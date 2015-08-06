@@ -1,5 +1,6 @@
 # intmath
-Automatically exported from code.google.com/p/intmath
+
+    Automatically exported from code.google.com/p/intmath
 
 ## About
 
@@ -9,7 +10,7 @@ Note that the dedicated FPU in your computer can be so fast that casting to and 
 
 ## Installing
 
-    go get code.google.com/p/intmath/
+    go get github.com/plumbum/intmath/
 
 ## Usage
 
@@ -19,7 +20,7 @@ The root intmath package is only used for [godoc documentation](http://golang.or
   package main
 
   import (
-    "code.google.com/p/intmath/intgr"
+    "github.com/plumbum/intmath/intgr"
   )
 
   func main() {
@@ -72,6 +73,6 @@ Some code in u64 and i64 may be optimised to run faster on 32bit systems, at a m
 
 As mentioned before, the speed of modern FPUs should not be underestimated. Benchmarking is advised to see if your system actually benefits form this library. To do this run go test:
 
-    go test code.google.com/p/intmath -test.bench="Benchmark*"
+    go test github.com/plumbum/intmath -test.bench="Benchmark*"
   
 The benchmarks assume a uniform distribution of input. Some functions also include benchmarks for alternate implementations. These might just be more effective on your architecture.
