@@ -1,9 +1,11 @@
 package uintgr
 
+import "unsafe"
+
 // Log2 returns log base 2 of n. It's the same as index of the highest
 // bit set in n. n = 0 returns 0
 func Log2(n uint) (r uint) {
-	if n<<32 != 0 {
+	if unsafe.Sizeof(n) > 4 {
 		if uint64(n) >= 1<<32 {
 			r += 32
 			n >>= 32
