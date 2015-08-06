@@ -186,7 +186,7 @@ func TestLog2(t *testing.T) {
 		for j := uint(0); j < i; j++ {
 			k := int((1 << i) + (1 << j))
 			if intgr.Log2(k) != int(i) {
-				t.Logf("intgr.Log2(%v) == %v\n", k, intgr.Log2(k))
+				t.Logf("intgr.Log2(%v) == %v, expected %v\n", k, intgr.Log2(k), i)
 				t.FailNow()
 			}
 		}
@@ -200,7 +200,7 @@ func TestLog2(t *testing.T) {
 		for j := uint(0); j < i; j++ {
 			k := uint((1 << i) + (1 << j))
 			if uintgr.Log2(k) != i {
-				t.Logf("intgr.Log2(%v) == %v\n", k, uintgr.Log2(k))
+				t.Logf("intgr.Log2(%v) == %v\n, expected %v", k, uintgr.Log2(k), i)
 				t.Fail()
 			}
 		}
